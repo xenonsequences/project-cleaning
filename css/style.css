@@ -1135,6 +1135,13 @@ button {
 
 button:hover {
     background-color: purple;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
 }
 
 
@@ -1286,4 +1293,22 @@ button:hover {
     line-height: 20px;
     cursor: pointer;
     border: none;
+}
+
+.footer-two {
+    display: flex;
+    margin-top: 60px;
+}
+
+.footer-links {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: -5px;
+    margin-left: 520px;
+}
+
+a, .footer-link {
+    color: blue;
 }
