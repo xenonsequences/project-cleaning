@@ -90,27 +90,31 @@
                         <img class="picture-s3" src="images/heart.svg" alt="heart" width="72" height="72">
                         <div class="p1-text">
                             <p class="picture-s3-text">Clients</p>
-                            <p class="picture-s3-subtext">3,480+</p>
+                            <p class="picture-s3-subtext" id="counter">3,480<span class="black-plus">+</span></p>
                         </div>
                 </div>
                 <div class="s3-p2">
                         <img class="picture-s3" src="images/mark.svg" alt="mark" width="72" height="72">
                         <div class="p2-text">
                             <p class="picture-s3-text">Jobs Done</p>
-                            <p class="picture-s3-subtext">12,540+</p>
+                            <p class="picture-s3-subtext" id="counter-2">12,540<span class="black-plus">+</span></p>
                         </div>
                 </div>
                 <div class="s3-p3">
                         <img class="picture-s3" src="images/employer.svg" alt="employer" width="72" height="72">
                         <div class="p3-text">
                             <p class="picture-s3-text">Employers</p>
-                            <p class="picture-s3-subtext">100+</p>
+                            <p class="picture-s3-subtext" id="counter-3">100<span class="black-plus">+</span></p>
                         </div>
                 </div>
+                <script src="script.js"></script>
             </ul>
             <div class="block-s3-three">
                 <iframe width="1012" height="570" src="https://www.youtube.com/embed/fyI410zm2_A?si=M48mjWpFwa1P00Gg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
             </div>
+
+            
+
         </section>
     
         <section class="section-4">
@@ -231,15 +235,15 @@
             <p class="subtext-s7">Sed ut perspiciatis unde omnis iste natus error sit atem accusantium doloremque laudantiu sed ut.</p>
             <ul class="block-s7-one">
                 <li>
-                    <p class="numbers">10<span class="blue">+</span></p>
+                    <p class="numbers" id="counter-4">10<span class="blue">+</span></p>
                     <p class="numbers-text">Years</p>
                 </li>
                 <li>
-                    <p class="numbers">5k<span class="blue">+</span></p>
+                    <p class="numbers" id="counter-5">5k<span class="blue">+</span></p>
                     <p class="numbers-text">Clients</p>
                 </li>
                 <li>
-                    <p class="numbers">20k<span class="blue">+</span></p>
+                    <p class="numbers" id="counter-6">20k<span class="blue">+</span></p>
                     <p class="numbers-text">Jobs done</p>
                 </li>
             </ul>
@@ -266,7 +270,6 @@
                             <p class="picture-s8-title">8 best vacuum cleaners to clean any mess for your home in 2022</p>
                             <p class="picture-s8-text">Lorem ipsum dolor sit amet conse ctetur adip iscing elit justo quis odio sit sit ac port titor sit males.</p>
                             <p class="picture-s8-subtitle">Jan 28, 2022</p>
-                            <!-- ТУТ ПОВИНЕН БУТИ БІЛИЙ ПРЯМОКУТНИК -->
                         </div>
                     </li>
                 </ul>
@@ -277,7 +280,6 @@
                             <p class="picture-s8-title">How to properly disinfect your phone and other electronics</p>
                             <p class="picture-s8-text">Lorem ipsum dolor sit amet conse ctetur adip iscing elit justo quis odio sit sit ac port titor sit males.</p>
                             <p class="picture-s8-subtitle">Feb 1, 2022</p>
-                            <!-- ТУТ ПОВИНЕН БУТИ БІЛИЙ ПРЯМОКУТНИК -->
                         </div>
                     </li>
                 </ul>
@@ -297,9 +299,61 @@
             <p class="title-s9-2">Not convinced yet?</p>
             <p class="text-s9-2">Massa bibendum consectetur maurisid gravida purus, dolor dui amet morbi non nunc urna purus diam.</p>
             <div class="block-s9-two">
-                <button class="button-article-s9" type="button">Browse our packages</button>
+                <button class="button-article-s9" id="openModalBtn" type="button">Browse our packages</button>
+
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" id="closeModalBtn">&times;</span>
+                        <h2 class="h2-modal">Our packages</h2>
+                        <ul class="packages">
+                            <h3 class="modal-title">Standard</h3>
+                            <li>
+                                <p class="modal-text">Price: 249$;</p>
+                                <p class="modal-text">Time cleaning: 1 hour;</p>
+                                <p class="modal-text">Person: 2 person;</p>
+                            </li>
+                        </ul>    
+                        <ul class="packages">
+                            <h3 class="modal-title">Individual</h3>
+                            <li>
+                                <p class="modal-text">Price: 500$;</p>
+                                <p class="modal-text">Time cleaning: 30 minutes;</p>
+                                <p class="modal-text">Person: 4 person;</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <script src="script/script.js"></script>
             </div>
-            <!-- ТУТ ПОВИННА БУТИ ФОРМА -->
+            <div class="block-s9-three">
+
+                <form action="/submit" method="post">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                    
+                    <label for="phoneNumber">Phone Number:</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                    
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="requestedService">Requested Service:</label>
+                    <input type="text" id="requestedService" name="requestedService" required>
+                    
+                    <label for="dayOfService">Day of Service:</label>
+                    <input type="date" id="dayOfService" name="dayOfService" required>
+                    
+                    <label for="addNote">Add a Note:</label>
+                    <textarea id="addNote" name="addNote" rows="4"></textarea>
+                    
+                    <button type="submit">Submit Request</button>
+                </form>
+
+            </div>
         </section>
     
     </main>
@@ -309,7 +363,6 @@
             <div class="footer-s1">
                 <p class="footer-s1-title">Quality cleaning for your home</p>
                 <p class="footer-s1-text">Lorem ipsum dolor sit amet cteturdo adipiscing elit, sed do eiusmo.</p>
-                <!-- ТУТ ПОВИННІ БУТИ 5 ПРЯМОКУТНИКІВ ДЛЯ СОЦ.МЕРЕЖ -->
             </div>
             <div class="footer-s2">
                 <p class="footer-s2-title">Contact us</p>
