@@ -40,3 +40,14 @@ runCounter(100, 'counter-3');
 runCounter(10, 'counter-4');
 runCounter(5, 'counter-5');
 runCounter(20, 'counter-6');
+
+// Скрол
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
