@@ -1,9 +1,9 @@
 /* ----------------------------------------------------------------------------------------HEADER */
 .header {
     display: flex;
-    justify-content: center;
+    margin-left: 60px;
     align-items: center;
-    gap: 280px;
+    gap: 450px;
 }
 
 .logo-div {
@@ -176,7 +176,7 @@
 }
 
 .woman-s1 {
-    margin-left: 750px;
+    margin-left: 740px;
     margin-top: -500px;
 }
 
@@ -447,6 +447,7 @@
     text-align: center;
     margin-top: 48px;
     gap: 25px;
+    list-style-type: none;
 }
 
 .picture-s4-title {
@@ -640,7 +641,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 24px;
+    gap: 30px;
+    flex-shrink: 0;
+}
+
+.checkboxes-s6 {
+    display: flex;
+    height: 26px;
+    padding: 0px 21.984px 0px 0.016px;
+    align-items: center;
+    gap: 8px;
     flex-shrink: 0;
 }
 
@@ -758,7 +768,7 @@
 }
 
 .man {
-    margin-left: 775px;
+    margin-left: 725px;
     margin-top: -550px; 
 }
 
@@ -883,6 +893,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: 34px;
+    margin-left: 20px;
 }
 
 .picture-s8-text {
@@ -893,6 +904,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 30px;
+    margin-left: 20px;
 }
 
 .picture-s8-subtitle {
@@ -903,6 +915,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: 20px;
+    margin-left: 20px;
 }
 
 /* ----------------------------------------------------------------------------------------SECTION-9 */
@@ -1019,13 +1032,15 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Стилі для вмісту модального вікна */
 .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #fefefe;
-    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 50%;
+    width: 80%;
 }
 
 /* Стилі для кнопки закриття */
@@ -1144,6 +1159,14 @@ button:hover {
     line-height: 20px;
 }
 
+.form-text {
+    color: #211F54;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
 
 /* ----------------------------------------------------------------------------------------FOOTER */
 
@@ -1310,17 +1333,21 @@ button:hover {
 }
 
 a, .footer-link {
-    color: blue;
+    color: #0075FF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    text-decoration-line: underline;
 }
 
-.main {
-    width: 1440px;
-    align-items: center;
-    justify-content: center;
+.footer-text {
+    color: #6E7191;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
 }
-
-.header {
-    width: 1440px;
-    align-items: center;
-    justify-content: center;
-}
+/* Адаптив */
